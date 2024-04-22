@@ -33,11 +33,20 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
-
-    implementation("androidx.core:core-ktx:1.9.0")
+//glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.14.2")
+    implementation ("com.google.android.exoplayer:exoplayer-core:2.19.1")
+    implementation ("com.google.android.exoplayer:exoplayer-hls:2.19.1") // Add this line if you're using HLS streams
+    implementation ("com.google.android.exoplayer:exoplayer-ui:2.19.1")
+    implementation("androidx.core:core-ktx:1.13.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
